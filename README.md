@@ -3,7 +3,7 @@ Customizable buttons for iOS apps.
 
 ## TextButton
 A button with a text. It supports styles for 3 states:
-```
+```swift
 public struct Style {
   public var normal: State
   public var highlighted: State
@@ -41,7 +41,7 @@ git "https://github.com/qiwi/QiwiButtons" "master"
 
 ### Usage example:
 
-```
+```swift
 let style = TextButton.Style(normal: stateNormal, highlighted: stateHighlighted, disabled: stateDisabled, activityIndicatorColor: activityIndicatorColor, borderWidth: borderWidth, cornerRadius: cornerRadius, height: height)
 let textButton = TextButton(title: "Touch me", style: style)
 textButton.addAction(target: viewModel, method: ViewModel.action)
