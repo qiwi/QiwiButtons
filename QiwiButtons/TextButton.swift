@@ -169,7 +169,7 @@ public final class TextButton: TouchControllingView {
 
 public extension TextButton {
     
-    public struct State {
+	struct State {
         public var borderColor: UIColor
         public var fillColor: UIColor
         public var textAttributes: [NSAttributedString.Key: Any]
@@ -182,7 +182,7 @@ public extension TextButton {
         }
     }
     
-    public struct Style {
+	struct Style {
         public var normal = State()
         public var highlighted = State()
         public var disabled = State()
