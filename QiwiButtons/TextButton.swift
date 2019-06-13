@@ -77,6 +77,7 @@ public final class TextButton: TouchControllingView {
         }
         set {
             titleLabel.attributedText = NSAttributedString(string: newValue ?? "", attributes: currentState.textAttributes)
+			setAccessibilityLabelAndIdentifier()
         }
     }
 
@@ -147,7 +148,16 @@ public final class TextButton: TouchControllingView {
         self.title = title
         self.style = style
         updateStyle()
+		
+		isAccessibilityElement = true
+		accessibilityTraits = .button
+		setAccessibilityLabelAndIdentifier()
     }
+	
+	private func setAccessibilityLabelAndIdentifier() {
+		accessibilityLabel = title
+		accessibilityIdentifier = "button_\(title ?? "")"
+	}
 
     private func createConstraints() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
