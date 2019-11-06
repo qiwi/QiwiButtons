@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 /// Button with text
-@IBDesignable
-public final class TextButton: TouchControllingView {
+@IBDesignable @objc
+public class TextButton: TouchControllingView {
     
     private(set) var heightConstraint: NSLayoutConstraint!
     
