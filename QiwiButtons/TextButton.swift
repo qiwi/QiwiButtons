@@ -11,7 +11,7 @@ import UIKit
 
 /// Button with text
 @IBDesignable @objc
-public class TextButton: TouchControllingView {
+open class TextButton: TouchControllingView {
     
     private(set) var heightConstraint: NSLayoutConstraint!
     
@@ -128,7 +128,7 @@ public class TextButton: TouchControllingView {
         commonInit()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
