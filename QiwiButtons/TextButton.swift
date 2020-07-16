@@ -135,16 +135,16 @@ open class TextButton: TouchControllingView {
 
     public convenience init(title: String = "", style: Style = Style()) {
         self.init(frame: .zero)
-        self.titleLabel.text = title
+        self.title = title
         self.style = style
         updateStyle()
+		setAccessibilityLabelAndIdentifier()
     }
     
     private func commonInit(title: String = "", style: Style = Style()) {
         addSubview(titleLabel)
         addSubview(activityIndicator)
         createConstraints()
-        self.titleLabel.text = title
         self.title = title
         self.style = style
         updateStyle()
