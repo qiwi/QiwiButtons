@@ -18,6 +18,6 @@ let package = Package(
     targets: [
         // Our package contains two targets, one for our library
         // code, and one for our tests:
-        .target(name: "QiwiButtons", path: "QiwiButtons")
+        .target(name: "QiwiButtons", path: "QiwiButtons", exclude: ["Info.plist"])
     ]
 )
