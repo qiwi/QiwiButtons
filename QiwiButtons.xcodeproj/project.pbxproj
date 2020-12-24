@@ -62,6 +62,7 @@
 		7C7BAB1421B80AA4000DF754 /* ColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 		7C7BAB1621B80AAE000DF754 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		7C7BAB5921BF96DF000DF754 /* QiwiButtons.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QiwiButtons.podspec; sourceTree = "<group>"; };
+		C83BF13B25827974003DD11D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 		7C7BAAE521B7F73C000DF754 = {
 			isa = PBXGroup;
 			children = (
+				C83BF13B25827974003DD11D /* Package.swift */,
 				7C7BAB5921BF96DF000DF754 /* QiwiButtons.podspec */,
 				7C7BAAF121B7F73C000DF754 /* QiwiButtons */,
 				7C7BAB0321B80A5A000DF754 /* QiwiButtonsExample */,
