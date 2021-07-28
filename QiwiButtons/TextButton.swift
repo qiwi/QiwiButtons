@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 /// Button with text
-@IBDesignable @objc
+@IBDesignable
+@objc
 open class TextButton: TouchControllingView {
     
     private(set) var heightConstraint: NSLayoutConstraint!
@@ -202,7 +203,7 @@ public extension TextButton {
         public var cornerRadius: CGFloat = 0
         public var height: CGFloat?
         
-        public init(normal: State = State(), highlighted: State = State(), disabled: State = State(), activityIndicatorColor: UIColor = .gray, borderWidth: CGFloat = 0, cornerRadius: CGFloat = 0, height: CGFloat = 44) {
+		public init(normal: State = State(fillColor: .lightGray), highlighted: State = State(fillColor: .darkGray), disabled: State = State(), activityIndicatorColor: UIColor = .gray, borderWidth: CGFloat = 0, cornerRadius: CGFloat = 0, height: CGFloat = 44) {
             
             self.normal = normal
             self.highlighted = highlighted
