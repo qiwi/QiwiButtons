@@ -119,6 +119,23 @@ open class TextButton: TouchControllingView {
             })
         }
     }
+	
+	public func addAction(action: @escaping () -> Void) {
+		self.touchUpInside = action
+	}
+	
+	public func addLoadingAction(action: @escaping (@escaping () -> Void) -> Void) {
+		self.touchUpInside = { [weak self] in
+			DispatchQueue.main.async {
+				self?.isLoading = true
+				action({
+					DispatchQueue.main.async {
+						self?.isLoading = false
+					}
+				})
+			}
+		}
+	}
 
     override public var intrinsicContentSize: CGSize {
         return CGSize(width: UIView.noIntrinsicMetric, height: style.height ?? UIView.noIntrinsicMetric)
