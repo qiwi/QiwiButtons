@@ -120,11 +120,11 @@ open class TextButton: TouchControllingView {
         }
     }
 	
-	public func addAction(action: @escaping () -> Void) {
+	public func addAction(_ action: @escaping () -> Void) {
 		self.touchUpInside = action
 	}
 	
-	public func addLoadingAction(action: @escaping (@escaping () -> Void) -> Void) {
+	public func addLoadingAction(_ action: @escaping (@escaping () -> Void) -> Void) {
 		self.touchUpInside = { [weak self] in
 			DispatchQueue.main.async {
 				self?.isLoading = true
